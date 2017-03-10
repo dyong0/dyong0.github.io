@@ -1,13 +1,11 @@
 ---
 layout : post
 title : Java 분기 기법
-date : 2016-01-11
-tag : [java]
 ---
 
 특정환 상황을 나타내는 값에 따라 코드를 작성하고 싶을때 사용할 수 있는 분기 기법에 대해 소개합니다.
 
-###**1. C 스타일**
+## 1. C 스타일
 {% highlight java %}
 //type : 1 if type is first
 //       2 if type is second
@@ -36,7 +34,7 @@ branchWithLegacyValue(3);
 이 기법은 가장 단순하지만 가장 안좋은 기법입니다. 이 기법은 type의 값의 의미를 알 수 있는 방법이 없기 때문입니다.
 주석이라도 있으면 다행인데 주석도 없으면 작성자 외에는 전혀 이해할 수 없는 코드입니다.
 
-###**2. 상수 정의로 타입에 이름 붙이기** 
+##2. 상수 정의로 타입에 이름 붙이기
 {% highlight java %}
 public static int MY_TYPE1 = 1;
 public static int MY_TYPE2 = 2;
@@ -67,7 +65,7 @@ branchWithConstant(MY_TYPE3);
 그렇기 때문에 주석이 없어도 상수의 의미를 알 수 있습니다. 하지만 이 방법에도 문제가 있습니다. 
 그것은 바로 type에 숫자 0과 같은 값을 넣어도 코드가 실행이 된다는 것입니다.
 
-###**3. 열거형으로 상수 사용하기** 
+## 3. 열거형으로 상수 사용하기
 {% highlight java %}
 public enum MyType{
     TYPE1,
@@ -100,7 +98,7 @@ branchWithEnum(MyType.TYPE3);
 열거형으로 상수 타입을 선언하고 그 안에 상수들을 정의하는 것입니다. 이 방식은 아예 새로운 타입을 선언하기 때문에 호환되는 컴파일 타입이 없습니다. 
 그리고 이 기법은 MyType.TYPE1처럼 열거형을 먼저 적고 상수를 적기 때문에 상수들을 한 곳에 모아놓고 사용할 수 있다는 장점도 있습니다.
 
-###**4. 클래스의 static 상수 사용하기**
+## 4. 클래스의 static 상수 사용하기
 {% highlight java %}
 public abstract class MyAbstractClass{
     public static int TYPE1 = 1;
@@ -160,7 +158,7 @@ branchWithClass(new Type3());
 
 위 문제를 해결하는 방법으로 객체지향 프로그래밍의 다형성을 사용할 수 있습니다.
 
-###**5. 클래스로 다형성 사용하기**
+## 5. 클래스로 다형성 사용하기
 {% highlight java %}
 public interface MyInterface{
     void doSomething();
@@ -189,7 +187,7 @@ branchWithClass(new MyType3());
 하지만 이 기법에도 약간의 단점은 있습니다. 하나의 타입을 생성할 때마다 새로운 클래스를 만들어야 한다는 것입니다.
 그래서 작은 계산과 같이 짧은 코드에는 적합하지 않을 수 있습니다.    
 
-###**6. 열거형으로 다형성 사용하기** 
+## 6. 열거형으로 다형성 사용하기
 {% highlight java %}
 public enum MyEnum{
     MY_TYPE1{
@@ -224,7 +222,7 @@ branchWithClass(MyEnum.MY_TYPE3);
 이 기법은 5번 기법과 다르게 열거형을 정의할 때 모든 타입을 하나의 파일에서 정의할 수 있습니다.
 그래서 아주 많은 종류의 짧은 계산에 대한 분기를 해야할 때는 5번보다 이 기법이 훨씬 효율적입니다.
 
-#**결론**
+## 결론
 앞에서 보신 것처럼 분기 기법은 크게 상수를 사용하는 기법과 다형성을 이용하는 기법이 있습니다.
 상수를 사용하는 기법은 가능하면 유지보수가 상대적으로 편리한 열거형을 사용하시는 것이 좋습니다.
 다형성을 사용하는 기법은 각 분기에서 처리해야할 것이 많거나 분기마다 변수들을 사용하고 싶을때는 클래스 다형성을 이용하시는 것이 좋습니다.
