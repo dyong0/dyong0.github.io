@@ -34,7 +34,7 @@ branchWithLegacyValue(3);
 이 기법은 가장 단순하지만 가장 안좋은 기법입니다. 이 기법은 type의 값의 의미를 알 수 있는 방법이 없기 때문입니다.
 주석이라도 있으면 다행인데 주석도 없으면 작성자 외에는 전혀 이해할 수 없는 코드입니다.
 
-##2. 상수 정의로 타입에 이름 붙이기
+## 2. 상수 정의로 타입에 이름 붙이기
 {% highlight java %}
 public static int MY_TYPE1 = 1;
 public static int MY_TYPE2 = 2;
