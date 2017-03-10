@@ -1,9 +1,12 @@
+# Permalinks
+permalink: pretty
+
 # Setup
 title:               Going Work
 tagline:             'please help us'
 description:         ''
 url:                 https://dyong0.github.io
-baseurl:             'https://dyong0.github.io'
+baseurl:             ''
 paginate:            20
 
 # About/contact
