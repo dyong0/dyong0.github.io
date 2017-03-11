@@ -1,21 +1,24 @@
 # Permalinks
-permalink: pretty
+permalink         : pretty
 
 # Setup
-title:               Going Work
-tagline:             'please help us'
-description:         ''
-url:                 https://dyong0.github.io
-baseurl:             ''
-paginate:            20
+title             : Going Work
+tagline           : 'please help us'
+description       : ''
+url               : https://dyong0.github.io
+baseurl           : ''
+paginate          : 10
 
 # About/contact
-author:
-  name:              dyong
-  url:               https://dyong0.github.io
-  email:             likedyong@gmail.com
+author            :
+  name            : dyong
+  url             : https://dyong0.github.io
+  email           : likedyong@gmail.com
+  github          : https://github.com/dyong0
+  github_username : dyong0
+  linkedin        : https://www.linkedin.com/in/junyong-lee-9bb20aa8
 
 # Custom vars
-version:             1.0.0
+version           : 1.0.0
 
-gems: [jekyll-paginate, jekyll-watch, jekyll-assets]
+gems              : [jekyll-paginate, jekyll-watch, jekyll-assets]
