@@ -10,4 +10,4 @@ First, we never share the important things we should announce from our voice. Bu
 
 Second, the useless meetings force us to be punctual on the most crowded time, taking our precious time. It makes people to work harder in bad way.
 
-Last, no communication happens that supposed to happen though. It's because people know these are useless and interesting.
+Last, no communication happens that supposed to happen though. It's because people know these are useless and not interesting.
