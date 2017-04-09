@@ -4,10 +4,10 @@ comments : true
 title : Making others give up
 ---
 
-People with authoirty are likely to be stuborn. I read an article about those people think differently with others under the authoirty. Probably you also felt this in some of groups such as family, school, or work. 
+People with authoirty are likely to be stubborn. I read an article about how people with authority think differently from the others subordinate. Probably you also felt this in some of groups such as family, school, or work. 
 
 <!--break-->
 
-I like to reveal problems and discuss them with others. Some problems are easy to be solved, while giving us tons of benefits. But the authoirty guys in charge tend to refuse to challenge, because a new problem means a new responsibility to them. They stand by their authoirty, and push the powerless so that they can't make any excuse.
+The authoirty guys often take huge responsibilities. They don't like changes even in good way for mankind, because a new thing means a new responsibility to them. As a result, they stand by their authorities, and push the powerless by stepping over corpses.
 
-But we can fight against these authorities as we do in our democracy society. Whoever we are, we don't need to be just friendly sheeps. I suggest you would be bold.
+But we can fight against these authorities as we've done in our democratic society. We don't need to be just naive lambs. I suggest you be bold.
