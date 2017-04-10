@@ -4,7 +4,7 @@ comments : true
 title : Making others give up
 ---
 
-People with authority are likely to be stubborn. I read an article about how people with authority think differently from the subordinate. Probably you also felt this in some of groups such as family, school, or work. 
+People with authority are likely to be stubborn. I read an article about how people with authority think differently from their subordinates. Probably you also felt this in some of groups such as family, school, or work. 
 
 <!--break-->
 
