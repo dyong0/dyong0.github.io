@@ -34,8 +34,8 @@ Overwork            | 3      |           |
 Members             | 5      |           |
 
 Add scores of each option to correspoding criteria. The scores should be relative to each option. I recommend you have same values on the first option.
-Criteria            | Weight | Company A | Company B | Score of Company A | Score of Company B
 
+Criteria            | Weight | Company A | Company B | Score of Company A | Score of Company B
 Salary              | 4 | 100  | 120
 Workplace           | 2 | 100  | 110
 Opportunity to grow | 2 | 100  | 80
