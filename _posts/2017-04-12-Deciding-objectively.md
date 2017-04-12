@@ -10,7 +10,7 @@ Recently I watched a video about making a decision objectively. I linked this vi
 
 Basically this is making a decision based on some factors you matter. First draw a table with a header row, which has Criteria, Weight, Option 1, Option 2, Option N, Score of Option 1, Result of Option 2, and so on.
 
-**Vacation plan**
+Let's take an example of changing your job.
 
 Criteria | Weight | Company A | Company B | Score of Company A | Score of Company B
          |        |           |
