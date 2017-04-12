@@ -72,4 +72,4 @@ Members             | 5      | 100       | 95        | 500                | 475
 
 Company B got `1097.5`. You're still on Company B. If you still feel doubtful on the result, try again over again until you get confident. You can also ask your friends that this decision looks unbiased, so that making this decision clearer.
 
-Ref. [Video: Making a decision table for changing your job](https://www.youtube.com/watch?v=wDzl8Gj1N0A)
+Ref. [Video: Decision table for changing your job](https://www.youtube.com/watch?v=wDzl8Gj1N0A)
