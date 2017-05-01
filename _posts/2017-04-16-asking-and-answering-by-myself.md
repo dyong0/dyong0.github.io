@@ -4,14 +4,13 @@ comments : true
 title : Asking and answering by myself
 ---
 
-Since few days ago, I've been reading a book called [Effective Programming: More Than Writing Code](http://www.goodreads.com/book/show/15746409-effective-programming). One of the most impressive things was finding solutions of a problem by myself. I think that this idea is general but as useful enough as we can take advantage of it in our everyday life.
+Since a few days ago, I've been reading a book called [Effective Programming: More Than Writing Code](http://www.goodreads.com/book/show/15746409-effective-programming). One of the most impressive things was finding solutions of a problem by myself. I think that this idea is general but useful enough as we can take advantage of it in our everyday life.
 
 <!--break-->
 
-First of all, we usually don't know what we want to know. For example, a guy wanted to learn painting. He just googled how to paint and tried some tutorials. However, 6 months past, he still didn't feel improved. In this example, the guy wanted to learn painting, but he didn't know what he wanted to paint. He jumped too far, ignoring essential steps.
+First of all, we usually don't know what we want to know. For example, a guy wanted to learn painting. He just googled how to paint and tried some tutorials. However, 6 months passed, he still didn't feel that his painting got better. In this example, the guy wanted to learn painting, but he didn't know what he wanted to paint. He jumped too far, ignoring essential steps.
 
-Before starting a plan, ask yourself and try to make an answer by yourself. If you feel not confident with answering, write down the things you're not sure with. And then, try to be detailed as much as possible. It will let you know what you don't understand. Following these steps, you can know what you want to know exactly and what you don't know. You can make the plan reasonable, and also it will significantly reduce the chance of missing things to keep.
-
+Before starting a plan, ask yourself everything of the plan as much as possible. And then, try to answer the questions by yourself. If you don't feel confident with giving detailed answers, just write them down. While making a list of the rough answers, try to be detailed as much as possible. This practice will let you know what you don't understand. 
 
 The following is the part of the book mentioned on the top. Last 2 paragraphs were talking about an application of the idea from this quote.
 
@@ -27,4 +26,4 @@ The following is the part of the book mentioned on the top. Last 2 paragraphs we
 >
 > Does this happen to you? Sometimes asking the right question seems like half the problem
 
-Whenever I'm asked some questions, I ask the questions back to get the genuine question. It's the same principle. Ask yourself to understand your actual questions.
+Whenever I'm asked a question, I ask them back to get the core meaning. It's the same principle. Ask and answer yourself to understand your genuine question.
