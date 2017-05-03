@@ -4,26 +4,12 @@ comments : true
 title : Asking and answering by myself
 ---
 
-Since a few days ago, I've been reading a book called [Effective Programming: More Than Writing Code](http://www.goodreads.com/book/show/15746409-effective-programming). One of the most impressive things was finding solutions of a problem by myself. I think that this idea is general but useful enough as we can take advantage of it in our everyday life.
+Since a few days ago, I've been reading a book called [Effective Programming: More Than Writing Code](http://www.goodreads.com/book/show/15746409-effective-programming). One of the most impressive things was finding solutions for a problem by myself. I think that this idea is general but useful enough as we can take advantage of it in our everyday lives.
 
 <!--break-->
 
-First of all, we usually don't know what we want to know. For example, a guy wanted to learn painting. He just googled how to paint and tried some tutorials. However, 6 months passed, he still didn't feel that his painting got better. In this example, the guy wanted to learn painting, but he didn't know what he wanted to paint. He jumped too far, ignoring essential steps.
+First of all, we often don't know what we want to know. For example, a guy wanted to learn painting. He just googled how to paint and tried some tutorials. However, 6 months passed, he still didn't feel that his painting got better. In this story, the guy wanted to learn painting, but he didn't know what he wanted to paint. He jumped too far, ignoring essential steps.
 
-Before starting a plan, ask yourself everything of the plan as much as possible. And then, try to answer the questions by yourself. If you don't feel confident with giving detailed answers, just write them down. While making a list of the rough answers, try to be detailed as much as possible. This practice will let you know what you don't understand. 
+Before starting a plan, examine everything about the plan. If you don't feel confident with being detailed, just write them down. This practice will let you know what you don't understand. In addition, I apply this good practice to make better answers. Whenever I'm asked a question, I ask it back in order to get the core meaning from the questioner. It's the same principle.
 
-The following is the part of the book mentioned on the top. Last 2 paragraphs were talking about an application of the idea from this quote.
-
-> I don’t know how many times this has happened:
->
-> - I have a problem
-> - I decide to bring it to stack overflow (Q&A community)
-> - I awkwardly write down my question
-> - I realize that the question doesn’t make any sense
-> - I take 15 minutes to rethink how to ask my question
-> - I realize that I’m attacking the problem from a wrong direction entirely
-> - I start from scratch and find my solution quickly
->
-> Does this happen to you? Sometimes asking the right question seems like half the problem
-
-Whenever I'm asked a question, I ask them back to get the core meaning. It's the same principle. Ask and answer yourself to understand your genuine question.
+About the book I mentioned at the beginning, it says that the author got a problem, so he wrote a draft of the question on a Q&A community. However the questioner couldn't finish writing it, since he realized that not only his question was unreasonable, but also the problem was wrong itself. As a result, he started to find solutions for the problem from the scratch, and finally he could make a good answer for the problem.
