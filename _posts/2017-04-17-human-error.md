@@ -8,8 +8,8 @@ Do you think that you can accumulate numbers sequentially from 1 to 1000 without
 
 <!--break-->
 
-Let's bring this heavy calculation to the real life. Suppose you're under a cruel pressure where you should never make mistakes, surrounded by the full of unexpected things. You might lose confidence, and also you won't be proactive.
+Let's bring this heavy calculation to the real life. Suppose you're under a cruel pressure where you should never make mistakes, surrounded by the full of unexpected things. You might lose confidence, and you also won't be proactive.
 
 Human errors always happen even with being super careful. Blaming people who take responsibilities can't be any solution for this problem. The correct way to prevent human errors is adopting a system that can be entirely trusted.
 
-Reliable systems are built on tests, which detect unexpected behaviors and changes. And also you can make the systems testable as long as they are simple.
+Reliable systems are built on tests, which detect unexpected behaviors and changes. And you can make the systems testable as long as they are simple.
