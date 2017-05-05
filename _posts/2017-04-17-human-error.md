@@ -4,7 +4,7 @@ comments : true
 title : Human error
 ---
 
-Do you think that you can accumulate numbers sequentially from 1 to 1000 without any error? You might say yes, but I never do. The calculation gives me 1000 times of chances of making a mistake. 1 + 2 = 3, 3 + 4 = 7, 7 + 5 = 12, and so on. Even if I finish calculating the accumulation, I can't say that the answer is correct. Because I don't have any proof to show.
+Do you think that you can accumulate numbers sequentially from 1 to 1000 without any error? You might say yes, but I never do. The calculation gives me 1000 chances of making a mistake. 1 + 2 = 3, 3 + 4 = 7, 7 + 5 = 12, and so on. Even if I finish calculating the accumulation, I can't say that the answer is correct. Because I don't have any proof to show.
 
 <!--break-->
 
