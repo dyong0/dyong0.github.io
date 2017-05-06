@@ -4,7 +4,7 @@ comments : true
 title : How to quit playing games effectively
 ---
 
-I started to play games since I was about 5. I also started programming as I wanted to make a game. Games have affected my whole life so much. Realizing that I spent too much time on playing games, I've been trying to quit wasting time on games.
+I started to play games since I was about 5. And I also started programming as I wanted to make a game. Games have affected my whole life so much. Realizing that I spent too much time on playing games, I've been trying to quit wasting time on games.
 
 <!--break-->
 
