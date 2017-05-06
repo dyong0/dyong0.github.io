@@ -1,7 +1,7 @@
 ---
 layout : post
 comments : true
-title : Advanced silence communication
+title : Advanced silent communication
 ---
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/uEuLBNg9xxk" frameborder="0" allowfullscreen></iframe>
