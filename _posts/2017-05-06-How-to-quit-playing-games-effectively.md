@@ -9,4 +9,4 @@ I've been playing games about for 20 years. Games have affected my whole life bo
 <!--break-->
 I tried uninstalling games, deleting my accounts of them, and having other hobbies. But they all didn't work for me, because I still had the possibility of getting back to play games.
 
-The key to quit playing games is understanding your laziness. I uninstalled Windows, as a result, I need to setup my PC from the scratch if I really want to play games, which takes me at least 10 hours. This way tested my laziness seriously, and I got used to doing something different instead of games. My laziness won.
+The key to quit playing games is understanding your laziness. I uninstalled Windows, as a result, if I really want to play games I need to setup my PC from the scratch, which takes me at least 10 hours. This way tested my laziness seriously, and I got used to doing something different instead of games. My laziness won.
