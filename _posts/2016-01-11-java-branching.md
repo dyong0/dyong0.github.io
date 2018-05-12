@@ -2,18 +2,18 @@
 layout : post
 title : Java 분기 기법
 date : 2016-01-11
-tag : [java]
 ---
 
-특정환 상황을 나타내는 값에 따라 코드를 작성하고 싶을때 사용할 수 있는 분기 기법에 대해 소개합니다.
+Java에서 상태에 따라 다른 동작을 구현하고 싶을때 사용할 수 있는 분기 기법에 대해 소개합니다.
 
-###**1. C 스타일**
-{% highlight java %}
+## 1. 오늘까지만 일 할래요 기법
+
+```java
 //type : 1 if type is first
 //       2 if type is second
 //       3 if type is third
-void branchWithLegacyValue(int type){
-    switch(type){
+void branchByLiteral(int type) {
+    switch(type) {
         case 1:
             doSomething1();
         break;
@@ -28,22 +28,22 @@ void branchWithLegacyValue(int type){
     }
 }
 
-branchWithLegacyValue(1);
-branchWithLegacyValue(2);
-branchWithLegacyValue(3);
-{% endhighlight %}
+branchByLiteral(1);
+branchByLiteral(2);
+branchByLiteral(3);
+```
 
-이 기법은 가장 단순하지만 가장 안좋은 기법입니다. 이 기법은 type의 값의 의미를 알 수 있는 방법이 없기 때문입니다.
-주석이라도 있으면 다행인데 주석도 없으면 작성자 외에는 전혀 이해할 수 없는 코드입니다.
+레거시 코드에서 자주 볼 수 있는 형태입니다. 몹시 바쁜 일정에 쫓기다 보면 종종 작성하게 됩니다. 이 글에서 소개하는 기법 중 가장 좋지 않습니다. 왜냐하면 상태에 대한 정보를 알려면 이 함수를 읽어봐야 하기 때문입니다. 더욱이나 주석이 없다면 상태의 의미를 유추하기도 정말 어려운 코드입니다. 무조건적으로 재작성이 요구됩니다.
 
-###**2. 상수 정의로 타입에 이름 붙이기** 
-{% highlight java %}
+## 2. 프로그래밍 언어를 무시하는 기법
+
+```java
 public static int MY_TYPE1 = 1;
 public static int MY_TYPE2 = 2;
-public static int MY_TYPE3 = 3; 
+public static int MY_TYPE3 = 3;
 
-void branchWithConstant(int type){
-    switch(type){
+void branchByConstant(int type) {
+    switch(type) {
         case MY_TYPE1:
             doSomething1();
         break;
@@ -58,24 +58,22 @@ void branchWithConstant(int type){
     }
 }
 
-branchWithConstant(MY_TYPE1);
-branchWithConstant(MY_TYPE2);
-branchWithConstant(MY_TYPE3);
-{% endhighlight %}
+branchByConstant(MY_TYPE1);
+branchByConstant(MY_TYPE2);
+branchByConstant(MY_TYPE3);
+```
 
-이 기법은 1번 기법의 문제인 "값의 의미를 알 수 없다"를 해결한 기법입니다. 이 기법은 상수를 정의함으로써 값에 설명적인 이름을 붙입니다.
-그렇기 때문에 주석이 없어도 상수의 의미를 알 수 있습니다. 하지만 이 방법에도 문제가 있습니다. 
-그것은 바로 type에 숫자 0과 같은 값을 넣어도 코드가 실행이 된다는 것입니다.
+이 기법은 앞의 기법의 문제인 **값의 의미를 알 수 없다**를 해결한 기법입니다. 이 기법은 상수를 정의해서 값에 설명적인 이름을 붙입니다. 그렇기 때문에 주석이 없어도 상수의 의미를 알 수 있고, 이 함수와 상수들을 외부에서 사용하기에도 나쁘지 않습니다. 하지만 이 기법 역시 문제가 있습니다. 상수의 타입이 primitive이기 때문에, `branchByConstant(1)`과 같은 코드도 동작하기 때문입니다. 이 기법도 가능하면 사용하지 않는게 좋습니다.
 
-###**3. 열거형으로 상수 사용하기** 
-{% highlight java %}
-public enum MyType{
+## 3. 프로그래밍 언어를 존중하는 기법
+```java
+public enum MyType {
     TYPE1,
-    TYPE2,    
+    TYPE2,
     TYPE3
 }
 
-void branchWithEnum(MyType type){
+void branchByEnum(MyType type) {
     switch(type){
         case MyType.TYPE1:
             doSomething1();
@@ -91,141 +89,74 @@ void branchWithEnum(MyType type){
     }
 }
 
-branchWithEnum(MyType.TYPE1);
-branchWithEnum(MyType.TYPE2);
-branchWithEnum(MyType.TYPE3);
-{% endhighlight %}
+branchByEnum(MyType.TYPE1);
+branchByEnum(MyType.TYPE2);
+branchByEnum(MyType.TYPE3);
+```
 
-이 기법은 2번 기법의 문제인 "상수의 컴파일 타입과 호환되는 타입의 값과 미리 정의한 상수들을 구분하기 어렵다"를 해결한 방법입니다.
-열거형으로 상수 타입을 선언하고 그 안에 상수들을 정의하는 것입니다. 이 방식은 아예 새로운 타입을 선언하기 때문에 호환되는 컴파일 타입이 없습니다. 
-그리고 이 기법은 MyType.TYPE1처럼 열거형을 먼저 적고 상수를 적기 때문에 상수들을 한 곳에 모아놓고 사용할 수 있다는 장점도 있습니다.
+이 기법은 앞의 기법의 문제인 **상수의 컴파일 타입과 호환되는 타입의 값을 넣어도 동작한다**를 해결한 방법입니다. 열거형으로 상수의 타입을 명시적으로 정의하기 때문에, 이 열거형 타입을 상속하지 않는 이상 호환되는 타입이 존재하지 않습니다.
 
-###**4. 클래스의 static 상수 사용하기**
-{% highlight java %}
-public abstract class MyAbstractClass{
-    public static int TYPE1 = 1;
-    public static int TYPE2 = 2;
-    public static int TYPE3 = 3;
-    
-    private int type;
-    
-    public void getType(){
-        return this.type;
-    } 
-}
-public class Type1 extends MyAbstractClass{
-    public Type1(){
-        this.type = MyAbstractClass.TYPE1;
-    }
-}
-public class Type2 extends MyAbstractClass{
-    public Type2(){
-        this.type = MyAbstractClass.TYPE2;
-    }
-}
-public class Type3 extends MyAbstractClass{
-    public Type3(){
-        this.type = MyAbstractClass.TYPE3;
-    }
-}
-
-void branchWithClass(MyAbstractClass branchFactor){
-    switch(branchFactor.getType()){
-        case MyAbstractClass.TYPE1:
-            doSomething1();
-        break;
-        case MyAbstractClass.TYPE2:
-            doSomething2();
-        break;
-        case MyAbstractClass.TYPE3:
-            doSomething3();
-        break;
-        default:
-        break;
-    }
-}
-
-branchWithClass(new Type1());
-branchWithClass(new Type2());
-branchWithClass(new Type3());
-{% endhighlight %}
-
-이 기법은 3번의 기법과 거의 같은 방법입니다.
-열거형 대신 추상 클래스나 클래스를 정의해서 static 변수를 만들어놓고 사용하는 방법입니다.
-하지만 별로 추천하는 방법은 아닙니다.
-
-여기까지 나온 방법들은 모두 switch-case 분기 구문을 사용합니다.
-이렇게 분기 구문을 사용하면 타입의 개수가 변경될 때마다 그 타입을 사용하는 모든 코드들을 변경해야한다는 아주 큰 단점이 있습니다.
-코드의 재사용성 및 유지보수 측면에서 굉장히 좋지 않습니다.
-
-위 문제를 해결하는 방법으로 객체지향 프로그래밍의 다형성을 사용할 수 있습니다.
-
-###**5. 클래스로 다형성 사용하기**
-{% highlight java %}
-public interface MyInterface{
+## 5. 프로그래밍 언어를 더욱 존중하는 기법: 다형성
+```java
+public interface MyInterface {
     void doSomething();
 }
-public class MyType1{
+public class MyType1 {
     public void doSomething();
 }
-public class MyType2{
+public class MyType2 {
     public void doSomething();
 }
-public class MyType3{
+public class MyType3 {
     public void doSomething();
 }
 
-void branchWithClass(MyInterface branch){
+void branchByPolymorphismAndEnum(MyInterface branch) {
     branch.doSomething();
 }
 
-branchWithClass(new MyType1());
-branchWithClass(new MyType2());
-branchWithClass(new MyType3());
-{% endhighlight %}
+branchByPolymorphismAndEnum(new MyType1());
+branchByPolymorphismAndEnum(new MyType2());
+branchByPolymorphismAndEnum(new MyType3());
+```
 
-이 기법은 클래스 다형성을 사용하는 기법입니다. 
-이 기법을 사용하면 앞의 1~4번 기법의 문제를 한 번에 해결할 수 있습니다.
-하지만 이 기법에도 약간의 단점은 있습니다. 하나의 타입을 생성할 때마다 새로운 클래스를 만들어야 한다는 것입니다.
-그래서 작은 계산과 같이 짧은 코드에는 적합하지 않을 수 있습니다.    
+이 기법은 OOP의 다형성을 이용합니다. 앞에 나열한 기법들의 문제들을 모두 해결합니다. 하지만 이 기법에도 약간의 단점은 있습니다. 하나의 분기를 추가할 때마다 새로운 클래스를 만들어야 한다는 것입니다. 그래서 작은 계산과 같이 짧은 코드에는 적합하지 않을 수 있습니다.
 
-###**6. 열거형으로 다형성 사용하기** 
-{% highlight java %}
-public enum MyEnum{
-    MY_TYPE1{
-        public abstract void doSomething(){
-            ...    
-        } 
+### 6. 열거형으로 다형성
+```java
+public enum MyEnum {
+    MY_TYPE1 {
+        public abstract void doSomething() {
+            // do something
+        }
     },
-    MY_TYPE2{
-        public abstract void doSomething(){
-            ...    
-        } 
+    MY_TYPE2 {
+        public abstract void doSomething() {
+            // do something
+        }
     },
-    MY_TYPE3{
-        public abstract void doSomething(){
-            ...    
-        } 
+    MY_TYPE3 {
+        public abstract void doSomething() {
+            // do something
+        }
     }
-    
+
     public abstract void doSomething();
 }
 
-void branchWithClass(MyEnum branch){
+void branchByPolymorphismAndEnum(MyEnum branch){
     branch.doSomething();
 }
 
-branchWithClass(MyEnum.MY_TYPE1);
-branchWithClass(MyEnum.MY_TYPE2);
-branchWithClass(MyEnum.MY_TYPE3);
-{% endhighlight %}
- 
-이 기법은 열거형을 이용한 다형성을 사용하는 기법입니다.
-이 기법은 5번 기법과 다르게 열거형을 정의할 때 모든 타입을 하나의 파일에서 정의할 수 있습니다.
-그래서 아주 많은 종류의 짧은 계산에 대한 분기를 해야할 때는 5번보다 이 기법이 훨씬 효율적입니다.
+branchByPolymorphismAndEnum(MyEnum.MY_TYPE1);
+branchByPolymorphismAndEnum(MyEnum.MY_TYPE2);
+branchByPolymorphismAndEnum(MyEnum.MY_TYPE3);
+```
 
-#**결론**
-앞에서 보신 것처럼 분기 기법은 크게 상수를 사용하는 기법과 다형성을 이용하는 기법이 있습니다.
-상수를 사용하는 기법은 가능하면 유지보수가 상대적으로 편리한 열거형을 사용하시는 것이 좋습니다.
-다형성을 사용하는 기법은 각 분기에서 처리해야할 것이 많거나 분기마다 변수들을 사용하고 싶을때는 클래스 다형성을 이용하시는 것이 좋습니다.
-그렇지 않고 간단하지만 많은 분기에 대해서는 열거형을 사용한 다형성 기법이 효율적입니다.
+이 기법은 앞에 기법에서 나온 **다형성에서 짧은 코드가 반복될 때, 클래스를 매번 추가해야 하는 문제**를 해결합니다.
+
+## 결론
+앞에서 보신 것처럼 분기에 상수를 사용하거나 다형성을 이용할 수 있습니다. 상수를 사용해야 한다면 열거형을 사용해야 유지보수가 쉬워집니다. 다형성을 이용할 수 있는 경우에도 짧은 코드 조각들이 많으면 열거형을 사용하는게 좋습니다.
+
+## 참고
+- 도서: 클린코드
